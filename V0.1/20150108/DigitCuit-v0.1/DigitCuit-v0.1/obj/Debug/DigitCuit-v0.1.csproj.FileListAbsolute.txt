@@ -1,0 +1,15 @@
+c:\users\theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\DigitCuit-v0.1\bin\Debug\DigitCuit-v0.1.exe.config
+c:\users\theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\DigitCuit-v0.1\obj\Debug\DigitCuit_v0._1.Editor.resources
+c:\users\theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\DigitCuit-v0.1\obj\Debug\DigitCuit_v0._1.Main.resources
+c:\users\theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\DigitCuit-v0.1\obj\Debug\DigitCuit_v0._1.CompBar.resources
+c:\users\theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\DigitCuit-v0.1\obj\Debug\DigitCuit_v0._1.CompList.resources
+c:\users\theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\DigitCuit-v0.1\obj\Debug\DigitCuit_v0._1.Properties.Resources.resources
+c:\users\theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\DigitCuit-v0.1\obj\Debug\DigitCuit-v0.1.csproj.GenerateResource.Cache
+c:\users\theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\DigitCuit-v0.1\bin\Debug\DigitCuit-v0.1.exe
+c:\users\theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\DigitCuit-v0.1\bin\Debug\DigitCuit-v0.1.pdb
+c:\users\theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\DigitCuit-v0.1\obj\Debug\DigitCuit-v0.1.exe
+c:\users\theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\DigitCuit-v0.1\obj\Debug\DigitCuit-v0.1.pdb
+c:\users\theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\DigitCuit-v0.1\obj\Debug\DigitCuit_v0._1.Components.DC_UI.resources
+C:\Users\Theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\DigitCuit-v0.1\obj\Debug\DigitCuit_v0._1.ProjectView.resources
+C:\Users\Theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\DigitCuit-v0.1\bin\Debug\Jint.dll
+C:\Users\Theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\DigitCuit-v0.1\obj\Debug\DigitCuit-v0.1.csprojResolveAssemblyReference.cache

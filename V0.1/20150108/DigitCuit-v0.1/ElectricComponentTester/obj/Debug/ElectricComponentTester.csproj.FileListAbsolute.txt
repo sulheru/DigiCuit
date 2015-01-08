@@ -1,0 +1,12 @@
+C:\Users\Theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\ElectricComponentTester\bin\Debug\ElectricComponentTester.exe.config
+C:\Users\Theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\ElectricComponentTester\bin\Debug\ElectricComponentTester.exe
+C:\Users\Theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\ElectricComponentTester\bin\Debug\ElectricComponentTester.pdb
+C:\Users\Theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\ElectricComponentTester\bin\Debug\DigitCuit-v0.1.exe
+C:\Users\Theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\ElectricComponentTester\bin\Debug\Jint.dll
+C:\Users\Theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\ElectricComponentTester\bin\Debug\DigitCuit-v0.1.pdb
+C:\Users\Theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\ElectricComponentTester\obj\Debug\ElectricComponentTester.csprojResolveAssemblyReference.cache
+C:\Users\Theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\ElectricComponentTester\obj\Debug\ElectricComponentTester.Form1.resources
+C:\Users\Theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\ElectricComponentTester\obj\Debug\ElectricComponentTester.Properties.Resources.resources
+C:\Users\Theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\ElectricComponentTester\obj\Debug\ElectricComponentTester.csproj.GenerateResource.Cache
+C:\Users\Theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\ElectricComponentTester\obj\Debug\ElectricComponentTester.exe
+C:\Users\Theos\documents\visual studio 2013\Projects\DigitCuit-v0.1\ElectricComponentTester\obj\Debug\ElectricComponentTester.pdb
