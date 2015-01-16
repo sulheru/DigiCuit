@@ -45,8 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Electronics\Circuit.cs" />
     <Compile Include="Electronics\Component.cs" />
+    <Compile Include="Electronics\ComponentCollection.cs" />
+    <Compile Include="Electronics\Connector.cs" />
+    <Compile Include="Electronics\DirectCurrent.cs" />
+    <Compile Include="Electronics\DirectCurrentCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Graphics\" />
+    <Folder Include="Schema\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
