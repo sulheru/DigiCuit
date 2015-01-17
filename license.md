@@ -1,7 +1,7 @@
 # GNU GENERAL PUBLIC LICENSE
 ## Version 2, June 1991
 
-Copyright (C) 1989, 1991 Free Software Foundation, Inc., <http://fsf.org/>51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USAEveryone is permitted to copy and distribute verbatim copiesof this license document, but changing it is not allowed.
+Copyright (c. 1989, 1991 Free Software Foundation, Inc., <http://fsf.org/>51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USAEveryone is permitted to copy and distribute verbatim copiesof this license document, but changing it is not allowed.
 
 ### Preamble
 
@@ -33,11 +33,11 @@ You may charge a fee for the physical act of transferring a copy, andyou may at 
 
 2. You may modify your copy or copies of the Program or any portionof it, thus forming a work based on the Program, and copy anddistribute such modifications or work under the terms of Section 1above, provided that you also meet all of these conditions:
 
-a) You must cause the modified files to carry prominent noticesstating that you changed the files and the date of any change.
+a. You must cause the modified files to carry prominent noticesstating that you changed the files and the date of any change.
 
-b) You must cause any work that you distribute or publish, that inwhole or in part contains or is derived from the Program or anypart thereof, to be licensed as a whole at no charge to all thirdparties under the terms of this License.
+b. You must cause any work that you distribute or publish, that inwhole or in part contains or is derived from the Program or anypart thereof, to be licensed as a whole at no charge to all thirdparties under the terms of this License.
 
-c) If the modified program normally reads commands interactivelywhen run, you must cause it, when started running for suchinteractive use in the most ordinary way, to print or display anannouncement including an appropriate copyright notice and anotice that there is no warranty (or else, saying that you providea warranty) and that users may redistribute the program underthese conditions, and telling the user how to view a copy of thisLicense.(Exception: if the Program itself is interactive butdoes not normally print such an announcement, your work based onthe Program is not required to print an announcement.)
+c. If the modified program normally reads commands interactivelywhen run, you must cause it, when started running for suchinteractive use in the most ordinary way, to print or display anannouncement including an appropriate copyright notice and anotice that there is no warranty (or else, saying that you providea warranty) and that users may redistribute the program underthese conditions, and telling the user how to view a copy of thisLicense.(Exception: if the Program itself is interactive butdoes not normally print such an announcement, your work based onthe Program is not required to print an announcement.)
 
 These requirements apply to the modified work as a whole.Ifidentifiable sections of that work are not derived from the Program,and can be reasonably considered independent and separate works inthemselves, then this License, and its terms, do not apply to thosesections when you distribute them as separate works.But when youdistribute the same sections as part of a whole which is a work basedon the Program, the distribution of the whole must be on the terms ofthis License, whose permissions for other licensees extend to theentire whole, and thus to each and every part regardless of who wrote it.
 
@@ -47,11 +47,11 @@ In addition, mere aggregation of another work not based on the Programwith the P
 
 3. You may copy and distribute the Program (or a work based on it,under Section 2) in object code or executable form under the terms ofSections 1 and 2 above provided that you also do one of the following:
 
-a) Accompany it with the complete corresponding machine-readablesource code, which must be distributed under the terms of Sections1 and 2 above on a medium customarily used for software interchange; or,
+a. Accompany it with the complete corresponding machine-readablesource code, which must be distributed under the terms of Sections1 and 2 above on a medium customarily used for software interchange; or,
 
-b) Accompany it with a written offer, valid for at least threeyears, to give any third party, for a charge no more than yourcost of physically performing source distribution, a completemachine-readable copy of the corresponding source code, to bedistributed under the terms of Sections 1 and 2 above on a mediumcustomarily used for software interchange; or,
+b. Accompany it with a written offer, valid for at least threeyears, to give any third party, for a charge no more than yourcost of physically performing source distribution, a completemachine-readable copy of the corresponding source code, to bedistributed under the terms of Sections 1 and 2 above on a mediumcustomarily used for software interchange; or,
 
-c) Accompany it with the information you received as to the offerto distribute corresponding source code.(This alternative isallowed only for noncommercial distribution and only if youreceived the program in object code or executable form with suchan offer, in accord with Subsection b above.)
+c. Accompany it with the information you received as to the offerto distribute corresponding source code.(This alternative isallowed only for noncommercial distribution and only if youreceived the program in object code or executable form with suchan offer, in accord with Subsection b above.)
 
 The source code for a work means the preferred form of the work formaking modifications to it.For an executable work, complete sourcecode means all the source code for all modules it contains, plus anyassociated interface definition files, plus the scripts used tocontrol compilation and installation of the executable.However, as aspecial exception, the source code distributed need not includeanything that is normally distributed (in either source or binaryform) with the major components (compiler, kernel, and so on) of theoperating system on which the executable runs, unless that componentitself accompanies the executable.
 
@@ -93,7 +93,7 @@ If you develop a new program, and you want it to be of the greatestpossible use 
 
 To do so, attach the following notices to the program.It is safestto attach them to the start of each source file to most effectivelyconvey the exclusion of warranty; and each file should have at leastthe "copyright" line and a pointer to where the full notice is found.
 
-Digital Circuit Simulator Copyright (C) 2015 DigiCuit
+Digital Circuit Simulator Copyright (c. 2015 DigiCuit
 
 This program is free software; you can redistribute it and/or modifyit under the terms of the GNU General Public License as published bythe Free Software Foundation; either version 2 of the License, or(at your option) any later version.
 
@@ -105,7 +105,7 @@ Also add information on how to contact you by electronic and paper mail.
 
 If the program is interactive, make it output a short notice like thiswhen it starts in an interactive mode:
 
-Gnomovision version 69, Copyright (C) year name of authorGnomovision comes with ABSOLUTELY NO WARRANTY; for details type `show w'.This is free software, and you are welcome to redistribute itunder certain conditions; type `show c' for details.
+Gnomovision version 69, Copyright (c. year name of authorGnomovision comes with ABSOLUTELY NO WARRANTY; for details type `show w'.This is free software, and you are welcome to redistribute itunder certain conditions; type `show c' for details.
 
 The hypothetical commands `show w' and `show c' should show the appropriateparts of the General Public License.Of course, the commands you use maybe called something other than `show w' and `show c'; they could even bemouse-clicks or menu items--whatever suits your program.
 
