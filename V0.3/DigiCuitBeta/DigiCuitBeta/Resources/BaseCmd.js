@@ -1,6 +1,8 @@
 
 var openJsFile = "openjsfile";
 var quit = "quit";
+var canvas= "_canvas";
+
 var events = {
     alert: "",
     prompt: ""

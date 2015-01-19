@@ -3,38 +3,38 @@
  * Puerta logica AND de 2 entradas (x4)
  * @returns {Component}
  */
-function Breadboard() {
+function Wire() {
     var sock = new DirectCurrent();
-    this.Name = "BreadBoard";
+    this.Name = "Wire";
     this.Description = "Puerta logica NAND de 2 entradas (x4)";
     this.Parent = "Sockets";
     this.Version = "1.0.2015.01.18";
-    this.Plugs = [];
-    this.Sockets = [
-        {"X": 0, "Y": 0, "Connector": 0, "DC": new DirectCurrent()}
+    this.Plugs = [
+        {"X": 0, "Y": 0, "Connector": 0, "DC": new DirectCurrent()},
+        {"X": 0, "Y": 0, "Connector": 1, "DC": new DirectCurrent()}
     ];
+    this.Sockets = [];
     this.Rendering = {
-        "isBreadBoard": true,
-        "Breadboard": {
-            "width": 1,
-            "height": 1
+        "isWire": true,
+        "Wire": {
+            "X": 1,
+            "Y": 1,
+            "Brush": {
+                "color": "#FF0000",
+                "width": 3
+            }
         },
-        "GraphicShifting": {"X": 1, "Y": 1},
+        "GraphicShifting": {"X": -7, "Y": -7},
         "Location": {"X": 0, "Y": 0},
         "toString": function () {
             return JSON.stringify(this);
-        }
+        },
     };
     this.Schema = {
         "ComponentSymbol": "IC7408\ComponentSymbol.png"
     };
     this.Run = function () {
-        sock = new DirectCurrent();
-        this.Sockets.forEach(function (dcv) {
-            sock.add(dcv);
-        });
-        this.reset();
-        this.Rendering.Breadboard.width
+
     };
 
     this.reset = function () {
@@ -52,10 +52,11 @@ function Breadboard() {
     };
 }
 
-function loadbb(x, y, w, h) {
-    Components.push(new Breadboard);
-    Components[Components.length-1].Rendering.Breadboard.height = h;
-    Components[Components.length-1].Rendering.Breadboard.width = w;
-    Components[Components.length-1].Rendering.Location.X = x;
-    Components[Components.length-1].Rendering.Location.Y = y;
+function DrawWire(X1, Y1, X2, Y2) {
+    var Index = Components.length;
+    Components.push(new Wire);
+    Components[Index].Rendering.Location.X = Components[Index].Plugs[0].X = X1;
+    Components[Index].Rendering.Location.Y = Components[Index].Plugs[0].Y = Y1;
+    Components[Index].Rendering.Wire.X = Components[Index].Plugs[1].X = X2;
+    Components[Index].Rendering.Wire.Y = Components[Index].Plugs[1].Y = Y2;
 }

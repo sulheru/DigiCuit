@@ -16,7 +16,7 @@ namespace DigiCuitBetaTester
         static void Main(string[] args)
         {
             foreach (string file in args)
-            { cmdHandler(File.ReadAllText(file)); }
+            { cmdHandler(File.ReadAllText(file)); }            
 
             string result = "openjsfile";
             while (result.ToLower() != "quit")
@@ -25,9 +25,17 @@ namespace DigiCuitBetaTester
                 {
                     case "openjsfile": LoadJs(ref result); break;
                     case "msgalert": Alert(ref result); break;
+                    case "_canvas": uiShow(ref result); break;
                     default: Terminal(ref result); break;
                 }
             }
+        }
+
+        private static void uiShow(ref string result)
+        {
+            UITester uiTester = new UITester();
+            uiTester.ShowDialog();
+            result = "";
         }
 
         private static void LoadJs(ref string result)
@@ -38,6 +46,8 @@ namespace DigiCuitBetaTester
             {
                 foreach (string file in dlg.FileNames)
                 { cmdHandler(File.ReadAllText(file)); }
+                FileInfo info = new FileInfo(dlg.FileName);
+                Directory.SetCurrentDirectory(info.DirectoryName);
             }
             result = "";
         }

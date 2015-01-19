@@ -7,3 +7,5 @@ C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBetaTester\bi
 C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBetaTester\obj\Debug\DigiCuitBetaTester.csprojResolveAssemblyReference.cache
 C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBetaTester\obj\Debug\DigiCuitBetaTester.exe
 C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBetaTester\obj\Debug\DigiCuitBetaTester.pdb
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBetaTester\obj\Debug\DigiCuitBetaTester.UITester.resources
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBetaTester\obj\Debug\DigiCuitBetaTester.csproj.GenerateResource.Cache

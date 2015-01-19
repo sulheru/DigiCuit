@@ -63,7 +63,7 @@ namespace DigiCuitBeta.Electronics
         void _runConnections()
         {
             foreach (GirdNode node in Nodes)
-            {
+            {                
                 if (node.Plug != null && node.Socket != null)
                 {
                     string plug = node.Plug.ToString(true);
