@@ -68,7 +68,7 @@ namespace DigiCuitBeta.Graphics
                 int len = Int32.Parse(_getLength().ToString());
                 for (int i = 0; i < len; i++)
                 {
-                    string cmd = String.Format("Components[{0}].Rendering;", i.ToString());
+                    string cmd = String.Format("circuit.Components[{0}].Rendering;", i.ToString());
                     string json = Circuit.Command(cmd);
                     Component comp = new Component(json, GirdSize);
                     if (comp.Available)
@@ -96,7 +96,7 @@ namespace DigiCuitBeta.Graphics
 
         double _getLength()
         {
-            Jint.Native.JsValue val = Circuit.Execute("Components.length");
+            Jint.Native.JsValue val = Circuit.Execute("circuit.Components.length");
             if (val.IsNumber())
             { return val.AsNumber(); }
             else { throw new NullReferenceException(); }

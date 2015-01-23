@@ -119,7 +119,7 @@ namespace DigiCuitBeta.Graphics
                     double x = xVal.AsNumber();
                     double y = yVal.AsNumber();
                     Point pnt = new Point(Int32.Parse(x.ToString()) * _girdSize.Width, Int32.Parse(y.ToString()) * _girdSize.Height);
-                    Size size = new Size(pnt.X - Location.X, pnt.Y - Location.Y);
+                    Size size = new Size(pnt.X - (Location.X * _girdSize.Width), pnt.Y - (Location.Y*_girdSize.Height));
                     ComponentImage = new Bitmap(size.Width, size.Height);
                     System.Drawing.Graphics g = System.Drawing.Graphics.FromImage(ComponentImage);
                     g.Clear(Color.FromArgb(0, Color.Black));

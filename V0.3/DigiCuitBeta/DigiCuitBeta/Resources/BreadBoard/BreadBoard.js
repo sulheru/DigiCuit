@@ -53,9 +53,24 @@ function Breadboard() {
 }
 
 function loadbb(x, y, w, h) {
-    Components.push(new Breadboard);
-    Components[Components.length-1].Rendering.Breadboard.height = h;
-    Components[Components.length-1].Rendering.Breadboard.width = w;
-    Components[Components.length-1].Rendering.Location.X = x;
-    Components[Components.length-1].Rendering.Location.Y = y;
+    console.log('trying(x:' + x + 'y:' + y + 'w:' + w + 'h:' + h + ')');
+    circuit.add(Breadboard);
+    console.log('added');
+    circuit.commit();
+    console.log('committed');
+    circuit.Components[circuit.Components.length - 1].Rendering.Breadboard.height = h;
+    console.log('h');
+    circuit.Components[circuit.Components.length - 1].Rendering.Breadboard.width = w;
+    console.log('w');
+    circuit.Components[circuit.Components.length - 1].Rendering.Location.X = x;
+    console.log('x');
+    circuit.Components[circuit.Components.length - 1].Rendering.Location.Y = y;
+    console.log('y');
+}
+
+function bbchSize(i, w, h) {
+    if (circuit.Components[i].Rendering.isBreadBoard) {
+        circuit.Components[i].Rendering.Breadboard.width = w;
+        circuit.Components[i].Rendering.Breadboard.height = h;
+    }
 }

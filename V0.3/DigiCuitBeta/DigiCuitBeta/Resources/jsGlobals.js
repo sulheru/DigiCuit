@@ -1,4 +1,16 @@
 
+
+Array.prototype.move = function (old_index, new_index) {
+    if (new_index >= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+};
+
 var Version = "0.15.2015.01.14";
 var Description = "";
 var Components = [];
@@ -40,7 +52,7 @@ function DirectCurrent() {
         this.voltage += dcv.voltage;
         this.ohms += dcv.ohms;
         this.amperes += dcv.amperes;
-    }
+    };
 }
 
 function Run() {
@@ -60,14 +72,7 @@ function elecricExchange(plug, socket) {
     Component[socket.componentId].Sockets[socket.ioId].DC = dc;
 }
 
-Array.prototype.move = function (old_index, new_index) {
-    if (new_index >= this.length) {
-        var k = new_index - this.length;
-        while ((k--) + 1) {
-            this.push(undefined);
-        }
-    }
-    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
-    return this; // for testing purposes
-};
-
+function chLoc(i,x,y){
+    Components[i].Rendering.Location.X=x;
+    Components[i].Rendering.Location.Y=y;
+}

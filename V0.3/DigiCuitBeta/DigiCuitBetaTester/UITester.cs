@@ -28,6 +28,7 @@ namespace DigiCuitBetaTester
         {
             if (Renderer.IsRendering) { Renderer.StopRendering(); }
             else { Renderer.StartRendering(); }
+            toolStripButton1.Text = Renderer.IsRendering ? "<" : "4";
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -61,6 +62,7 @@ namespace DigiCuitBetaTester
         {
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.Filter = "Archivos de Javascript (*.js)|*.*";
+            dlg.Multiselect = true;
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 foreach (string jsFile in dlg.FileNames)
@@ -72,9 +74,9 @@ namespace DigiCuitBetaTester
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void toolStripButton3_Click(object sender, EventArgs e)
         {
-
+            Renderer = new DigiCuitBeta.Graphics.Renderer(Canvas);
         }
     }
 }
