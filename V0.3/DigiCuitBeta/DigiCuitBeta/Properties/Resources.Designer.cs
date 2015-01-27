@@ -59,5 +59,51 @@ namespace DigiCuitBeta.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a 
+        ///var circuit = new function () {
+        ///    this.Components = [];
+        ///    this.Version = &quot;2.0.2015.01.20&quot;;
+        ///    this.Description = &quot;&quot;;
+        ///    this.waiting = [];
+        ///
+        ///    this.add = function (type) {
+        ///        this.waiting.push(new type());
+        ///    };
+        ///
+        ///    this.insert = function (index, type) {
+        ///        Components.splice(index, 0, new type());
+        ///    };
+        ///
+        ///    this.remove = function (index) {
+        ///        Components.splice(index, 1);
+        ///    };
+        ///
+        ///    this.Run = function () {
+        ///        Connector = [];
+        ///        for (var i = 0; i &lt; Components.length; i++ [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string Circuit {
+            get {
+                return ResourceManager.GetString("Circuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a var console = new function () {
+        ///    this.log = [];
+        ///    this.cmd = function (command) {
+        ///        var res = eval(command);
+        ///        this.log.push({&quot;command&quot;: command, &quot;result&quot;: res});
+        ///    };
+        ///};
+        ///.
+        /// </summary>
+        internal static string Console {
+            get {
+                return ResourceManager.GetString("Console", resourceCulture);
+            }
+        }
     }
 }

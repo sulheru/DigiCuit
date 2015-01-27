@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Electronics\Circuit.cs" />
+    <Compile Include="Electronics\CircuitOLD.cs" />
     <Compile Include="Graphics\Component.cs" />
     <Compile Include="Graphics\Renderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +72,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\About.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circuit.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Console.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
