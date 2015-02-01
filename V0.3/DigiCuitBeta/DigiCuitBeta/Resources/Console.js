@@ -22,31 +22,59 @@
  * <p>You can develope a listener pointing to <i>console.events.args</i> and 
  * stoping the loop by changing <i>console.events.args.HasRetuned = true</i> 
  */
+
 var console = new function () {
     this.events = {
-        "args": {"type": "alert", "prompt": "", "HasRetuned": false, "result": undefined},
+        "args": {"type": "alert", "prompt": "", "IsRunning": false, "result": null},
         "raise": function (prompt, type) {
             if (typeof type === "undefined")
-                type = alert;
-            this.events.args.prompt = prompt;
-            this.events.args.type = type;
-            while (!this.events.args.HasRetuned)
+                type = "alert";
+            console.events.args.prompt = prompt;
+            console.events.args.type = type;
+            console.events.args.IsRunning = true;
+            while (console.events.args.IsRunning)
                 ;
-            events.args.HasRetuned = false;
+            console.events.args.IsRunning = false;
             return this.events.args.result;
         }
     };
-
-    this.log = [];
-    this.logLimit = 0;
+    this.log = new Array();
 
     this.command = function (cmd) {
-        var res = eval(cmd);
-        this.log.push({"cmd": cmd, "res": res});
-        if (this.logLimit > 0) {
-            var l = this.log.length - this.logLimit;
-            if (l > 0)
-                this.log.splice(0, l);
+        var res;
+        var err;
+        cmd = cmd.replace(new RegExp("'", 'g'), '"');
+        try {
+            res = eval(cmd);
         }
+        catch (err) {
+            res = err.message;
+        }
+        if (res === undefined)
+            res = "undefined";
+        this.log.add(cmd, res);
+        return res;
     };
 };
+
+console.log.limit = 0;
+console.log.add = function () {
+    var res = 0;
+    res = this.push({"cmd": arguments[0], "res": arguments[1]});
+
+    if (this.limit > 0) {
+        var l = this.length - this.limit;
+        if (l > 0)
+            res = this.splice(0, l).length;
+    }
+
+    return res;
+};
+
+console.log.toString = function () {
+    return this.join("\n");
+}
+
+function test() {
+    return console.log.add('test()', 'Hello World!!');
+}

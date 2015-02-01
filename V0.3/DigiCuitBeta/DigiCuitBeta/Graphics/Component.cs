@@ -54,6 +54,7 @@ namespace DigiCuitBeta.Graphics
         protected Size _girdSize;
         protected bool _isBreadBoard = false;
         protected bool _isWire = false;
+        protected bool _isDrawMacro = false;
         protected Size _breadboard;
         protected Pen _wirePen;
         protected Point _wireEndPoint;
@@ -69,12 +70,19 @@ namespace DigiCuitBeta.Graphics
                 bool graphshift = SetGraphShifting(gra.AsObject().Get("GraphicShifting"));
                 SetIsWire(gra.AsObject().Get("isWire"));
                 SetIsBreadBoard(gra.AsObject().Get("isBreadBoard"));
+                SetIsDrawMacro(gra.AsObject().Get("isDrawMacro"));
                 bool setPic = false;
                 if (_isWire) {setPic= SetWire(gra.AsObject().Get("Wire")); }
                 else if (_isBreadBoard) { setPic = SetBreadboard(gra.AsObject().Get("Breadboard")); }
+                else if (_isBreadBoard) { setPic = SetDrawMacro(gra.AsObject().Get("DrawMacro")); }
                 else { setPic = SetComponentImage(gra.AsObject().Get("ComponentImage")); }
                 Available = (location && graphshift && setPic);
             }
+        }
+
+        private bool SetDrawMacro(JsValue jsValue)
+        {
+            throw new NotImplementedException();
         }
 
         protected bool SetBreadboard(JsValue jsValue)
@@ -163,6 +171,9 @@ namespace DigiCuitBeta.Graphics
 
         protected void SetIsWire(JsValue jsValue)
         { _isWire = (jsValue.IsBoolean() && jsValue.AsBoolean()); }
+
+        protected void SetIsDrawMacro(JsValue jsValue)
+        { _isDrawMacro = (jsValue.IsBoolean() && jsValue.AsBoolean()); }
 
         protected void SetIsBreadBoard(JsValue jsValue)
         { _isBreadBoard = (jsValue.IsBoolean() && jsValue.AsBoolean()); }

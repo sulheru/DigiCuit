@@ -38,6 +38,7 @@ function component() {
     this.sockets = new conectorList();
     this.Rendering = new componentImage();
     this.Schema = new componentImage();
+    this.Properties={};
     this.run = function () {
     };
     this.reset = function () {
@@ -52,14 +53,31 @@ function component() {
  * @returns {componentImage}
  */
 function componentImage() {
+    // Ruta relativa o completa del archivo de imagen a usar
     this.ComponentImage = "ImageDirectory.png";
+
+    // Desplazamiento de la esquina superior izquierda en pixels con relación a la cuadricula
     this.GraphicShifting = {"X": 8, "Y": 0};
+
+    // Localización en la cuadricula
     this.Location = {"X": 0, "Y": 0};
+
+    // Boolean. Define si es un cable o no
     this.isWire = false;
+
+    // Boolean. Define si es un breadboard o no
     this.isBreadboard = false;
+
+    // Boolean. Define si el Randerizador uasara una macro de comandos o no
     this.isDrawMacro = false;
+
+    // Objeto Bradboard. Define el ancho y el alto del breadboard. Por unidad de ancho y alto tiene 1 pin
     this.Breadboard = {"width": 0, "height": 0};
+
+    // Objeto Wire. Define en segundo extremo del cable y su color
     this.Wire = {"X": 0, "Y": 0, "Brush": "#FF000000"};
+
+    // Objeto macro. Genera un gráfico con una macro de comandos.
     this.DrawMacro = new drawMacro();
 }
 
@@ -114,5 +132,23 @@ function componentInfo(name, description, group, version) {
         }
     };
 }
-var comp = new component();
 
+
+function DirectCurrent() {
+
+    this = {
+        "voltage":0,
+        "ohms":0,
+        get amperes() {
+            return  voltage / ohms;
+        },
+        get wats() {
+            return voltage * amperes;
+        }
+    };
+
+    this.toString = function () {
+        return JSON.stringify(this);
+    };
+}
+var comp = new component();

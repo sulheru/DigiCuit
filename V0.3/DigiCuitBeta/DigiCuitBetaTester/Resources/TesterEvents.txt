@@ -1,0 +1,3 @@
+function openFile(){
+	console.events.raise("Archivos de Javascript (*.js)|*.js","openfile");
+}

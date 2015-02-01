@@ -21,17 +21,15 @@ var circuit = new function () {
     this.isRunning = false;
     this.run = function () {
         this.isRunning = true;
-        var comps;
         var comp;
         var conn = new connectors();
         comp.prototype = new component;
         while (this.isRunning) {
-            comps = this.slice(0);
-            for (var i = 0; i < comps.length; i++) {
-                comp = comps[i]
+            for (var i = 0; i < this.length; i++) {
+                comp = this[i];
                 comp.run();
                 var cList;
-                cList.prototype = {"X": 0, "Y": 0, "Connector": 0, "DC": undefined}
+                cList.prototype = {"X": 0, "Y": 0, "Connector": 0, "DC": undefined};
                 var j = 0;
                 for (j = 0; j < comp.plugs; j++) {
                     cList = comp.plugs[j];

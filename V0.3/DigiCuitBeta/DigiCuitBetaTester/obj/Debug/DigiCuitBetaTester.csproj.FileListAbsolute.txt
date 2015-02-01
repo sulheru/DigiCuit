@@ -9,3 +9,4 @@ C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBetaTester\ob
 C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBetaTester\obj\Debug\DigiCuitBetaTester.pdb
 C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBetaTester\obj\Debug\DigiCuitBetaTester.UITester.resources
 C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBetaTester\obj\Debug\DigiCuitBetaTester.csproj.GenerateResource.Cache
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBetaTester\obj\Debug\DigiCuitBetaTester.Properties.Resources.resources

@@ -10,61 +10,52 @@ namespace DigiCuitBetaTester
 {
     class Program
     {
-        static DigiCuitBeta.Electronics.Circuit js = new DigiCuitBeta.Electronics.Circuit();
+        static DigiCuitBeta.Electronics.Circuit js;
+        static bool quit = false;
 
-        [STAThread]
+        [STAThreadAttribute]
         static void Main(string[] args)
         {
-            foreach (string file in args)
-            { cmdHandler(File.ReadAllText(file)); }            
-
-            string result = "openjsfile";
-            while (result.ToLower() != "quit")
+            LoadJs();
+            string result = "";
+            while (!quit)
             {
-                switch (result)
-                {
-                    case "openjsfile": LoadJs(ref result); break;
-                    case "msgalert": Alert(ref result); break;
-                    case "_canvas": uiShow(ref result); break;
-                    default: Terminal(ref result); break;
-                }
+                result = Console.ReadLine();
+                Terminal(ref result);
+                Console.WriteLine(result);
             }
         }
 
-        private static void uiShow(ref string result)
+        private static void LoadJs()
         {
-            UITester uiTester = new UITester();
-            uiTester.ShowDialog();
-            result = "";
+            js = new DigiCuitBeta.Electronics.Circuit();
+            js.DoNotLogExecute(DigiCuitBetaTester.Properties.Resources.TesterEvents);
+            js.ConsoleStartListening();
+            js.RaiseEvent += new EventHandler<DigiCuitBeta.Electronics.Circuit.ConsoleEventArgs>(js_RaiseEvent);
         }
 
-        private static void LoadJs(ref string result)
+        static void js_RaiseEvent(object sender, DigiCuitBeta.Electronics.Circuit.ConsoleEventArgs e)
+        {
+            switch (e.Type)
+            {
+                case "openfile": e.Result = "'" + OpenFileDialog(e.Prompt) + "'"; break;
+                default:
+                    e.Result = "'" + MessageBox.Show(e.Prompt, "console message", MessageBoxButtons.YesNoCancel).ToString() + "'";
+                    break;
+            }
+        }
+
+        private static string OpenFileDialog(string p)
         {
             OpenFileDialog dlg = new OpenFileDialog();
-            dlg.Filter = "Archivos de Javascript (*.js)|*.js";
+            dlg.Filter = p;
             if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                foreach (string file in dlg.FileNames)
-                { cmdHandler(File.ReadAllText(file)); }
-                FileInfo info = new FileInfo(dlg.FileName);
-                Directory.SetCurrentDirectory(info.DirectoryName);
-            }
-            result = "";
-        }
-
-        private static void Alert(ref string result)
-        {
-            string msg = cmdHandler("this.message");
-            System.Windows.Forms.MessageBox.Show(msg);
-            result = "";
-        }
+            { js.DoNotLogExecute(File.ReadAllText(dlg.FileName)); return true.ToString(); }
+            return false.ToString();
+        }   
 
         static void Terminal(ref string result)
-        {            
-            Console.WriteLine(result);
-            string cmd = Console.ReadLine();
-            result = cmdHandler(cmd);
-        }
+        { result = cmdHandler(result); }
 
         static string cmdHandler(string cmd)
         {
