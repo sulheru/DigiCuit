@@ -34,11 +34,11 @@ function component() {
             return "Version number string";
         }
     };
-    this.plugs = new conectorList();
-    this.sockets = new conectorList();
+    this.plugs = new Array();
+    this.sockets = new Array();
     this.Rendering = new componentImage();
     this.Schema = new componentImage();
-    this.Properties={};
+    this.Properties = new properties();
     this.run = function () {
     };
     this.reset = function () {
@@ -65,42 +65,20 @@ function componentImage() {
     // Boolean. Define si es un cable o no
     this.isWire = false;
 
-    // Boolean. Define si es un breadboard o no
-    this.isBreadboard = false;
+    // Boolean. Define si es un Node o no
+    this.isNode = false;
 
     // Boolean. Define si el Randerizador uasara una macro de comandos o no
     this.isDrawMacro = false;
 
-    // Objeto Bradboard. Define el ancho y el alto del breadboard. Por unidad de ancho y alto tiene 1 pin
-    this.Breadboard = {"width": 0, "height": 0};
+    // Objeto Node. Define el ancho y el alto del Node. Por unidad de ancho y alto tiene 1 pin de conexxión
+    this.Node = {"width": 0, "height": 0};
 
     // Objeto Wire. Define en segundo extremo del cable y su color
     this.Wire = {"X": 0, "Y": 0, "Brush": "#FF000000"};
 
     // Objeto macro. Genera un gráfico con una macro de comandos.
-    this.DrawMacro = new drawMacro();
-}
-
-/**
- * drawMacro is a specialist array for the renderer
- * @returns {drawMacro}
- */
-function drawMacro() {
-    this.prototype = new Array();
-    this.add = function (drawFunction, drawArgs) {
-        this.push({"drawFunction": drawFunction, "drawArgs": drawArgs});
-    };
-}
-
-/**
- * conectorList is a specialist array for connectors
- * @returns {conectorList}
- */
-function conectorList() {
-    this.prototype = new Array();
-    this.prototype.add = function (X, Y, Conector, DC) {
-        this.push({"X": X, "Y": Y, "Connector": Conector, "DC": DC});
-    };
+    this.DrawMacro = new Array();
 }
 
 /**
@@ -133,12 +111,18 @@ function componentInfo(name, description, group, version) {
     };
 }
 
+function connector(X, Y, Connector, DC) {
+    this.X = X;
+    this.Y = Y;
+    this.Connector = Connector;
+    this.DC = DC;
+}
 
 function DirectCurrent() {
-
-    this = {
-        "voltage":0,
-        "ohms":0,
+    this.prototype = {
+        "ms": 0,
+        "ohms": 0,
+        "voltage": 0,
         get amperes() {
             return  voltage / ohms;
         },
@@ -151,4 +135,20 @@ function DirectCurrent() {
         return JSON.stringify(this);
     };
 }
-var comp = new component();
+
+function properties() {
+    this.add = function (type, key, value) {
+        if ((typeof value === "string" && type.toLowerCase() === "string") ||
+                (typeof value === "boolean" && type.toLowerCase() === "boolean") ||
+                (typeof value === "number" && type.toLowerCase() === "number")) {
+            this[key] = {"type": type, "key": key, "value": value};
+        } else {
+            var err = new Error("Type is not accepted. Only 'number', 'string' and 'boolean' are accepted.");
+            err.message = "Type is not accepted. Only 'number', 'string' and 'boolean' are accepted.";
+            throw err;
+        }
+    };
+    this.checkItem = function (index) {
+        return (this[index]["type"] !== undefined && this[index]["key"] !== undefined && this[index]["value"] !== undefined);
+    };
+}

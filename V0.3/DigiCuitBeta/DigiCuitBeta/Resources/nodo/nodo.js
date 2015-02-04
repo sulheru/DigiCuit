@@ -16,21 +16,23 @@
  */
 
 
-function resistencia() {
-    this.prototype = new component();
-    this.info = componentInfo('Resistencia', 'Resistencia común para circuitos con corriente continua en serie y paralelo.', 'Componentes básicos', '1.0.0.0')
-    this.plugs = [];
-    this.plugs.push(new connector(1, 1, 1, new DirectCurrent()));
-    this.plugs.push(new connector(1, 2, 2, new DirectCurrent()));
-    this.Properties = new properties();
-    this.Properties.add('number', 'resistencia', 90);
+function nodo() {
+    this.info = componentInfo('nodo', 'nodo mara conexión en paralelo.', 'Componentes básicos', '1.0.0.0')
+    this = new component();
+    this.sockets = new conectorList();
+    this.Rendering = new componentImage();
     this.run = function () {
-        if (this.Properties.resistencia !== 0) {
-            this.plugs[1].DC = this.plugs[0].DC;
-            this.plugs[1].DC.ohms += this.Properties.resistencia;
+        var conn = {"X": 0, "Y": 0, "Connector": 0, "Linked": false, "DC": new DirectCurrent()};
+        var dc = new DirectCurrent();
+        var ohms1 = 1;var ohms2 = 0;
+        for (conn in this.sockets) {
+            ohms1 *= conn.DC.ohms;            
+            ohms2 += conn.DC.ohms;
         }
-        else {
-            this.plugs[1].DC = this.plugs[0].DC;
+        dc.ohms = ohms1 / ohms2;
+        for (var i = 0; i < this.sockets.length; i++) {
+            this.sockets[i].DC = dc;
         }
     };
+
 }

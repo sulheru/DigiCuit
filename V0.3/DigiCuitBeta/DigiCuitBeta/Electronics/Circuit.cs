@@ -25,56 +25,57 @@ namespace DigiCuitBeta.Electronics
             public ConsoleEventArgs(string type,string prompt)
             { this.Type = type; this.Prompt = prompt; }
         }
-
-        public event EventHandler<ConsoleEventArgs> RaiseEvent;
-
+        
         Jint.Engine _circuit;
-        BackgroundWorker _listener;
+        BackgroundWorker _Runner;
+        public bool IsRunning
+        {
+            get
+            {
+                this.IsRunning = _Runner.IsBusy;
+                Jint.Native.JsValue jsVal = _circuit.Execute("circuit.isRunning").GetCompletionValue();
+                return (jsVal.IsBoolean() && jsVal.AsBoolean());
+            }
+            private set
+            { _circuit.SetValue("circuit.isRunning", value); }
+        }
+
+        public long Timer
+        {
+            get
+            {
+                Jint.Native.JsValue jsVal = _circuit.Execute("circuit.timer").GetCompletionValue();
+                return jsVal.IsNumber() ? Int64.Parse(jsVal.AsString()) : -1;
+            }
+            set
+            { _circuit.SetValue("circuit.timer", value); }
+        }
+
         public Circuit()
         {
             _circuit = new Jint.Engine();
-            _circuit.Execute(DigiCuitBeta.Properties.Resources.Console);
             _circuit.Execute(DigiCuitBeta.Properties.Resources.Circuit);
-            _listener = new BackgroundWorker();
-            _listener.DoWork += new DoWorkEventHandler(_listener_DoWork);            
+            _Runner = new BackgroundWorker();
+            _Runner.DoWork += new DoWorkEventHandler(_Runner_DoWork);
         }
 
-        bool _isListening = false;
-        public void ConsoleStartListening() { _isListening = true; _listener.RunWorkerAsync(); }
-        public void ConsoleStopListening() { _isListening = false; }
-
-        void _listener_DoWork(object sender, DoWorkEventArgs e)
+        void _Runner_DoWork(object sender, DoWorkEventArgs e)
         {
-                Jint.Native.JsValue events = this.Execute("console.events.args");
-                bool isRun;
-                while (_isListening)
-                {
-                    if (_circuit.Execute("console.events.args.IsRunning").GetCompletionValue().IsBoolean())
-                    {
-                        while (!_circuit.Execute("console.events.args.IsRunning").GetCompletionValue().AsBoolean()) ;
-                        events = _circuit.Execute("console.events.args").GetCompletionValue();
-                        if (events.IsObject() && events.AsObject().Get("type").IsString() && events.AsObject().Get("prompt").IsString())
-                        {
-                            ConsoleEventArgs console = new ConsoleEventArgs(events.AsObject().Get("type").AsString(), events.AsObject().Get("prompt").AsString());
-                            console.Returning += new EventHandler(console_Returning);
-                            if (this.RaiseEvent != null)
-                                this.RaiseEvent(this, console);
-                        }
-                    }
-                }
+            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+            sw.Start();
+            while (IsRunning)
+            {
+                this.Execute("circuit.run();");
+                this.Timer = sw.ElapsedMilliseconds;
+                sw.Restart();
+            }
         }
-
-        void console_Returning(object sender, EventArgs e)
-        {
-            string result = ((ConsoleEventArgs)sender).Result;
-            this.DoNotLogExecute(String.Format("console.events.args.result = {0}; console.events.args.IsRunning = false;", result));
-        }
+        
 
         public string Command(string cmd) { return this.Execute(cmd).ToString(); }
-        public Jint.Native.JsValue Execute(string cmd) { return _circuit.Execute(String.Format("console.command(\"{0}\");", cmd)).GetCompletionValue(); }
-        public Jint.Native.JsValue DoNotLogExecute(string cmd) { return _circuit.Execute(cmd).GetCompletionValue(); }
+        public Jint.Native.JsValue Execute(string cmd) { return _circuit.Execute(cmd).GetCompletionValue(); }
 
-        public void Run() { Command("circuit.run();"); }
-        public void Stop() { Command("circuit.isRunning = false;"); }
+        public void Run() { this.IsRunning = true; _Runner.RunWorkerAsync(); }
+        public void Stop() { this.IsRunning = false; }
     }
 }
