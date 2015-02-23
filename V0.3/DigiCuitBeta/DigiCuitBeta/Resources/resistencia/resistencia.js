@@ -16,13 +16,11 @@
  */
 
 
+resistencia.prototype = new component();
 function resistencia() {
-    this.prototype = new component();
     this.info = componentInfo('Resistencia', 'Resistencia común para circuitos con corriente continua en serie y paralelo.', 'Componentes básicos', '1.0.0.0')
-    this.plugs = [];
     this.plugs.push(new connector(1, 1, 1, new DirectCurrent()));
     this.plugs.push(new connector(1, 2, 2, new DirectCurrent()));
-    this.Properties = new properties();
     this.Properties.add('number', 'resistencia', 90);
     this.run = function () {
         if (this.Properties.resistencia !== 0) {

@@ -121,7 +121,34 @@
   <data name="Circuit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Circuit.js;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="ComponentPrototype" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ComponentPrototype.js;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="Console" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Console.js;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="PropertyIsNotArray" xml:space="preserve">
+    <value>La propiedad no es un array.</value>
+  </data>
+  <data name="PropertyIsNotBoolean" xml:space="preserve">
+    <value>La propiedad no es un booleano.</value>
+  </data>
+  <data name="PropertyIsNotColorObject" xml:space="preserve">
+    <value>La propiedad no es un objeto RGB ni una cadena hexadecimal</value>
+  </data>
+  <data name="PropertyIsNotNumber" xml:space="preserve">
+    <value>La propiedad no es un numero.</value>
+  </data>
+  <data name="PropertyIsNotObject" xml:space="preserve">
+    <value>La propiedad no es un objeto.</value>
+  </data>
+  <data name="PropertyIsNotString" xml:space="preserve">
+    <value>La propiedad no es una cadena.</value>
+  </data>
+  <data name="PropertyIsNullOrUndefined" xml:space="preserve">
+    <value>La propiedad es nula o no está definida.</value>
+  </data>
+  <data name="WireHasNoLength" xml:space="preserve">
+    <value>El cable tiene el mismo punto de origen y de destino.</value>
   </data>
 </root>

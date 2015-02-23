@@ -19,9 +19,10 @@ namespace DigiCuitBeta.Graphics
         }
         public event RendererStatusChangeEventHandler RendererStatusChange;
 
-        private System.ComponentModel.BackgroundWorker _renderer; 
-
-        public Electronics.Circuit Circuit { get; private set; }
+        private System.ComponentModel.BackgroundWorker _renderer;
+        
+        public bool OnlyOnce { get; set; }
+        public Jint.Native.JsValue Circuit { get; private set; }
         public Size GirdSize { get; set; }
 
         public Color BackgroundColor { set; get; }
@@ -33,10 +34,10 @@ namespace DigiCuitBeta.Graphics
 
         public bool IsRendering { get; private set; }
 
-        public Renderer(System.Windows.Forms.Control Layout)
+        public Renderer(System.Windows.Forms.Control Layout, Jint.Native.JsValue Circuit)
         {
             IsRendering = false;
-            Circuit = new Electronics.Circuit();
+            this.Circuit = Circuit;
             GirdSize = new Size(15, 15);
             this.Layout = Layout;
 
@@ -65,15 +66,16 @@ namespace DigiCuitBeta.Graphics
             {                
                 Canvas.Graphics.Clear(BackgroundColor);
                 if (IsGirdVisible) { DrawGird(); }
-                int len = Int32.Parse(_getLength().ToString());
+                int len = Int32.Parse(Circuit.AsArray().Get("length").AsString());
                 for (int i = 0; i < len; i++)
                 {
-                    string cmd = String.Format("circuit.Components[{0}].Rendering;", i.ToString());
-                    string json = Circuit.Command(cmd);
-                    Component comp = new Component(json, GirdSize);
+                    Jint.Native.JsValue jsComp = Circuit.AsArray().Get(i.ToString());
+                    Component comp = new Component(jsComp, GirdSize);
                     if (comp.Available)
                         Canvas.Graphics.DrawImage(comp.ComponentImage, comp.AbsolutePosition);
                 }
+                if (OnlyOnce)
+                { IsRendering = false; break; }
                 Canvas.Render();
             }
         }
@@ -92,14 +94,6 @@ namespace DigiCuitBeta.Graphics
                 Point b = new Point(Layout.Width, h);
                 Canvas.Graphics.DrawLine(new Pen(GirdColor), a, b);
             }
-        }
-
-        double _getLength()
-        {
-            Jint.Native.JsValue val = Circuit.Execute("circuit.Components.length");
-            if (val.IsNumber())
-            { return val.AsNumber(); }
-            else { throw new NullReferenceException(); }
         }
     }
 }

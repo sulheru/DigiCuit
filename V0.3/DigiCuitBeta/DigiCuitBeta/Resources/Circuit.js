@@ -18,44 +18,45 @@ var line = 0;
 var circuit = new Array();
 circuit.isRunning = false;
 circuit.timer = 0;
+circuit.conn = new Array();
 circuit.run = function () {
     var comp;
-    
     var conn = new Array();
     comp = new component;
     for (var i = 0; i < circuit.length; i++) {
-        
+        line = '27:' + i.toString();
         comp = this[i];
         comp.run();
         var cList;
         cList = {"X": 0, "Y": 0, "Connector": 0, "DC": undefined};
         var j = 0;
-        
+        line = '33:' + i.toString();
         for (j = 0; j < comp.plugs; j++) {
             cList = comp.plugs[j];
             conn = connector(conn, cList.X, cList.Y, true, {"comp": i, "conn": j});
         }
+        line = '38:' + i.toString();
         for (j = 0; j < comp.sockets; j++) {
             cList = comp.sockets[j];
-            
             conn = connector(conn, cList.X, cList.Y, false, {"comp": i, "conn": j});
         }
+        line = '43:' + i.toString();
     }
-    this.conn = conn;
+    circuit.conn = conn;
     for (var x = 0; x < conn.length; x++) {
-        
+
         for (var y = 0; y < conn[x].length; y++) {
-            
+
             if (conn[x][y].socket !== undefined && conn[x][y].plug !== undefined) {
                 var s = conn[x][y].socket;
-                
+
                 var p = conn[x][y].plug;
                 this[s.conn].sockets[s.conn].Linked = p;
                 this[p.conn].sockets[p.conn].Linked = s;
             }
         }
     }
-    
+
 };
 
 function connector(array, X, Y, isPlug, pointer) {
@@ -65,12 +66,12 @@ function connector(array, X, Y, isPlug, pointer) {
             array.push(undefined);
         }
     }
-    
+
     if (array[X] === undefined)
         array[X] = new Array(Y + 1);
     if (array[X][Y] === undefined)
         array[X][Y] = {"plug": undefined, "socket": undefined};
-    
+
     isPlug ? array[X][Y].plug = pointer : array[X][Y].socket = pointer;
     return array;
 }

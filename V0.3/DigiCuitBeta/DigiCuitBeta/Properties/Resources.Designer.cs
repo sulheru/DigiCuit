@@ -61,28 +61,18 @@ namespace DigiCuitBeta.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a 
-        ///var circuit = new function () {
-        ///    this.Components = [];
-        ///    this.Version = &quot;2.0.2015.01.20&quot;;
-        ///    this.Description = &quot;&quot;;
-        ///    this.waiting = [];
-        ///
-        ///    this.add = function (type) {
-        ///        this.waiting.push(new type());
-        ///    };
-        ///
-        ///    this.insert = function (index, type) {
-        ///        Components.splice(index, 0, new type());
-        ///    };
-        ///
-        ///    this.remove = function (index) {
-        ///        Components.splice(index, 1);
-        ///    };
-        ///
-        ///    this.Run = function () {
-        ///        Connector = [];
-        ///        for (var i = 0; i &lt; Components.length; i++ [resto de la cadena truncado]&quot;;.
+        ///   Busca una cadena traducida similar a /* 
+        /// * Copyright (C) 2015 Theos
+        /// *
+        /// * This program is free software: you can redistribute it and/or modify
+        /// * it under the terms of the GNU General Public License as published by
+        /// * the Free Software Foundation, either version 3 of the License, or
+        /// * (at your option) any later version.
+        /// *
+        /// * This program is distributed in the hope that it will be useful,
+        /// * but WITHOUT ANY WARRANTY; without even the implied warranty of
+        /// * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        /// * GNU General Public Li [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string Circuit {
             get {
@@ -91,18 +81,114 @@ namespace DigiCuitBeta.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a var console = new function () {
-        ///    this.log = [];
-        ///    this.cmd = function (command) {
-        ///        var res = eval(command);
-        ///        this.log.push({&quot;command&quot;: command, &quot;result&quot;: res});
-        ///    };
-        ///};
-        ///.
+        ///   Busca una cadena traducida similar a /* 
+        /// * Copyright (C) 2015 Theos
+        /// *
+        /// * This program is free software: you can redistribute it and/or modify
+        /// * it under the terms of the GNU General Public License as published by
+        /// * the Free Software Foundation, either version 3 of the License, or
+        /// * (at your option) any later version.
+        /// *
+        /// * This program is distributed in the hope that it will be useful,
+        /// * but WITHOUT ANY WARRANTY; without even the implied warranty of
+        /// * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        /// * GNU General Public Li [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string ComponentPrototype {
+            get {
+                return ResourceManager.GetString("ComponentPrototype", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a /* 
+        /// * Copyright (C) 2015 Theos
+        /// *
+        /// * This program is free software: you can redistribute it and/or modify
+        /// * it under the terms of the GNU General Public License as published by
+        /// * the Free Software Foundation, either version 3 of the License, or
+        /// * (at your option) any later version.
+        /// *
+        /// * This program is distributed in the hope that it will be useful,
+        /// * but WITHOUT ANY WARRANTY; without even the implied warranty of
+        /// * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        /// * GNU General Public Li [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string Console {
             get {
                 return ResourceManager.GetString("Console", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad no es un array..
+        /// </summary>
+        internal static string PropertyIsNotArray {
+            get {
+                return ResourceManager.GetString("PropertyIsNotArray", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad no es un booleano..
+        /// </summary>
+        internal static string PropertyIsNotBoolean {
+            get {
+                return ResourceManager.GetString("PropertyIsNotBoolean", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad no es un objeto RGB ni una cadena hexadecimal.
+        /// </summary>
+        internal static string PropertyIsNotColorObject {
+            get {
+                return ResourceManager.GetString("PropertyIsNotColorObject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad no es un numero..
+        /// </summary>
+        internal static string PropertyIsNotNumber {
+            get {
+                return ResourceManager.GetString("PropertyIsNotNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad no es un objeto..
+        /// </summary>
+        internal static string PropertyIsNotObject {
+            get {
+                return ResourceManager.GetString("PropertyIsNotObject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad no es una cadena..
+        /// </summary>
+        internal static string PropertyIsNotString {
+            get {
+                return ResourceManager.GetString("PropertyIsNotString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La propiedad es nula o no está definida..
+        /// </summary>
+        internal static string PropertyIsNullOrUndefined {
+            get {
+                return ResourceManager.GetString("PropertyIsNullOrUndefined", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El cable tiene el mismo punto de origen y de destino..
+        /// </summary>
+        internal static string WireHasNoLength {
+            get {
+                return ResourceManager.GetString("WireHasNoLength", resourceCulture);
             }
         }
     }

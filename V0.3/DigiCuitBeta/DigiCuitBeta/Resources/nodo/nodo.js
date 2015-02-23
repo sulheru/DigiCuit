@@ -15,24 +15,34 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
+nodo.prototype = new component();
 function nodo() {
-    this.info = componentInfo('nodo', 'nodo mara conexión en paralelo.', 'Componentes básicos', '1.0.0.0')
-    this = new component();
-    this.sockets = new conectorList();
-    this.Rendering = new componentImage();
+    this.info = componentInfo('nodo', 'nodo mara conexión en paralelo.', 'Componentes básicos', '1.0.0.0');
+    this.Properties.add('number', 'width', 1);
+    this.Properties.add('number', 'height', 1);
     this.run = function () {
         var conn = {"X": 0, "Y": 0, "Connector": 0, "Linked": false, "DC": new DirectCurrent()};
         var dc = new DirectCurrent();
-        var ohms1 = 1;var ohms2 = 0;
+        var ohms1 = 1;
+        var ohms2 = 0;
+        line=28;
         for (conn in this.sockets) {
-            ohms1 *= conn.DC.ohms;            
+            ohms1 *= conn.DC.ohms;
             ohms2 += conn.DC.ohms;
         }
+        line=33;
         dc.ohms = ohms1 / ohms2;
         for (var i = 0; i < this.sockets.length; i++) {
             this.sockets[i].DC = dc;
         }
     };
-
+    this.reload = function () {
+        var len = this.Properties.width * this.Properties.height;
+        this.sockets = new Array(len);
+        var conn = {"X": 0, "Y": 0, "Connector": 0, "Linked": false, "DC": new DirectCurrent()};
+        for (var i = 0; i < len; i++) {
+            conn.Connector = i + 1;
+            this.sockets[i] = conn;
+        }
+    };
 }

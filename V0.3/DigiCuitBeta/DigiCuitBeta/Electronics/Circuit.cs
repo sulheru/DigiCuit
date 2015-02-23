@@ -55,6 +55,7 @@ namespace DigiCuitBeta.Electronics
         {
             _circuit = new Jint.Engine();
             _circuit.Execute(DigiCuitBeta.Properties.Resources.Circuit);
+            _circuit.Execute(DigiCuitBeta.Properties.Resources.ComponentPrototype);
             _Runner = new BackgroundWorker();
             _Runner.DoWork += new DoWorkEventHandler(_Runner_DoWork);
         }

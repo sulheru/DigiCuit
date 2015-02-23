@@ -40,12 +40,21 @@ function component() {
     this.Schema = new componentImage();
     this.Properties = new properties();
     this.run = function () {
+        // Dummy foo
+    };
+    this.load = function () {
+        this.reload();
+    };
+    this.reload = function () {
+        // Dummy foo
     };
     this.reset = function () {
+        this.reload();
     };
     this.toString = function () {
         return JSON.stringify(this.info);
     };
+    this.load();
 }
 
 /**
@@ -75,7 +84,7 @@ function componentImage() {
     this.Node = {"width": 0, "height": 0};
 
     // Objeto Wire. Define en segundo extremo del cable y su color
-    this.Wire = {"X": 0, "Y": 0, "Brush": "#FF000000"};
+    this.Wire = {"X": 0, "Y": 0, "Brush": "#FF000000", "width": 1};
 
     // Objeto macro. Genera un gráfico con una macro de comandos.
     this.DrawMacro = new Array();
@@ -141,7 +150,14 @@ function properties() {
         if ((typeof value === "string" && type.toLowerCase() === "string") ||
                 (typeof value === "boolean" && type.toLowerCase() === "boolean") ||
                 (typeof value === "number" && type.toLowerCase() === "number")) {
-            this[key] = {"type": type, "key": key, "value": value};
+            this[key] = {
+                "type": type,
+                "key": key,
+                "value": value
+            };
+            this[key].toString = function () {
+                return this.value;
+            };
         } else {
             var err = new Error("Type is not accepted. Only 'number', 'string' and 'boolean' are accepted.");
             err.message = "Type is not accepted. Only 'number', 'string' and 'boolean' are accepted.";
