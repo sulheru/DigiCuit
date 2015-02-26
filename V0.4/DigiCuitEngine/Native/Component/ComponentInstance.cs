@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigiCuitEngine
+namespace DigiCuitEngine.Native.Component
 {
-    public class Class1
+    class ComponentInstance
     {
-
     }
 }

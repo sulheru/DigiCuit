@@ -48,6 +48,9 @@
     <Compile Include="Interfaces\INodeCollection.cs" />
     <Compile Include="Interfaces\IPath.cs" />
     <Compile Include="Interfaces\IPathCollection.cs" />
+    <Compile Include="Native\Component\ComponentConstructor.cs" />
+    <Compile Include="Native\Component\ComponentInstance.cs" />
+    <Compile Include="Native\Component\ComponentPrototype.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

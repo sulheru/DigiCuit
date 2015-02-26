@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Jint;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -11,6 +12,10 @@ namespace DigiCuitEngine.Interfaces
     {
         public abstract Point Location { get; set; }
         public abstract IPathCollection Paths { get; set; }
+
+        public INode(Engine engine)
+            : base(engine)
+        { }
 
         public override bool PathFinding(string[] VisitedIds, string endId, ref string[] PathIds, ref List<string[]>PathCollection)
         {
