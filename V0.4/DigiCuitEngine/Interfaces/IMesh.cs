@@ -11,5 +11,18 @@ namespace DigiCuitEngine.Interfaces
     {
         public abstract INodeCollection<Point> Nodes { get; set; }
         public abstract IPathCollection Paths { get; set; }
+
+        public override bool IsActive { get; set; }
+        public override string Id { get; set; }
+
+        public override void Run()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool PathFinding(string[] VisitedIds, string endId, ref string[] PathIds, ref List<string[]> PathCollection)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

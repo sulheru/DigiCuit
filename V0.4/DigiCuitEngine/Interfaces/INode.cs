@@ -12,38 +12,28 @@ namespace DigiCuitEngine.Interfaces
         public abstract Point Location { get; set; }
         public abstract IPathCollection Paths { get; set; }
 
-        public override bool IsActive
+        public override bool PathFinding(string[] VisitedIds, string endId, ref string[] PathIds, ref List<string[]>PathCollection)
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+            List<string> vIds = new List<string>();
+            vIds.AddRange(VisitedIds);
+            
+            List<string> pIds = new List<string>();
+            List<bool> hasExit = new List<bool>();
 
-        public override string Id
-        {
-            get
+            foreach (KeyValuePair<string, IPath> path in Paths)
             {
-                throw new NotImplementedException();
+                if (!vIds.Contains(path.Key))
+                {
+                    pIds.AddRange(PathIds);
+                    pIds.Add(path.Key);
+                    string[] pathIds = pIds.ToArray();
+                    bool isExit = path.Value.PathFinding(vIds.ToArray(), endId, ref pathIds, ref PathCollection);
+                    hasExit.Add(isExit);
+                    if (isExit) { PathCollection.Add(pathIds); }
+                    pIds.Clear();
+                }
             }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override void Run()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override bool PathFinding(string[] VisitedIds, string endId, out string[] PathIds)
-        {
-            throw new NotImplementedException();
+            return hasExit.Contains(true);
         }
     }
 }

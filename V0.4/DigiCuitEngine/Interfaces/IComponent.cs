@@ -11,6 +11,6 @@ namespace DigiCuitEngine.Interfaces
         public abstract bool IsActive { get; set; }
         public abstract string Id { get; set; }
         public abstract void Run();
-        public abstract bool PathFinding(string[] VisitedIds, string endId, out string[] PathIds);
+        public abstract bool PathFinding(string[] VisitedIds, string endId, ref string[] PathIds, ref List<string[]>PathCollection);
     }
 }

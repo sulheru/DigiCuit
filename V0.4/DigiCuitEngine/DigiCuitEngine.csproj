@@ -51,7 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Jint\Jint2.1\Jint2.1.csproj">
+    <ProjectReference Include="..\..\..\..\Visual Studio 2013\Projects\Jint\Jint2.1\Jint2.1.csproj">
       <Project>{b2421e77-b66c-4f21-9593-441b1bfbd5e8}</Project>
       <Name>Jint2.1</Name>
     </ProjectReference>

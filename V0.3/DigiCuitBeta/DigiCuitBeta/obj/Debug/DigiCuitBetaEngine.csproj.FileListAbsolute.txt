@@ -1,8 +1,0 @@
-C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBeta\bin\Debug\DigiCuitBeta.dll
-C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBeta\bin\Debug\DigiCuitBeta.pdb
-C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBeta\bin\Debug\Jint.dll
-C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBeta\obj\Debug\DigiCuitBeta.dll
-C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBeta\obj\Debug\DigiCuitBeta.pdb
-C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBeta\obj\Debug\DigiCuitBeta.Properties.Resources.resources
-C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBeta\obj\Debug\DigiCuitBetaEngine.csproj.GenerateResource.Cache
-C:\Users\Theos\Documents\GitHub\DigiCuit\V0.3\DigiCuitBeta\DigiCuitBeta\obj\Debug\DigiCuitBetaEngine.csprojResolveAssemblyReference.cache

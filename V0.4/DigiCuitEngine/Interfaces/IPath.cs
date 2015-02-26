@@ -11,39 +11,15 @@ namespace DigiCuitEngine.Interfaces
         public abstract INode Node1 { get; set; }
         public abstract INode Node2 { get; set; }
 
-
-        public override bool IsActive
+        public override bool PathFinding(string[] VisitedIds, string endId, ref string[] PathIds, ref List<string[]> PathCollection)
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+            List<string> pIds = new List<string>();
+            pIds.AddRange(PathIds);
 
-        public override string Id
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+            if (pIds.Last() == Node1.Id) { return Node2.PathFinding(VisitedIds, endId, ref  PathIds, ref PathCollection); }
+            else if (pIds.Last() == Node2.Id) { return Node1.PathFinding(VisitedIds, endId, ref  PathIds, ref PathCollection); }
 
-        public override void Run()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override bool PathFinding(string[] VisitedIds, string endId, out string[] PathIds)
-        {
-            throw new NotImplementedException();
+            return false;
         }
     }
 }

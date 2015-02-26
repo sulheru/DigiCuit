@@ -1,6 +1,0 @@
-c:\users\theos\documents\visual studio 2013\Projects\DigiCuit-alpha2\DigiCuit-alpha2\bin\Debug\DigiCuit-alpha2.dll
-c:\users\theos\documents\visual studio 2013\Projects\DigiCuit-alpha2\DigiCuit-alpha2\bin\Debug\DigiCuit-alpha2.pdb
-c:\users\theos\documents\visual studio 2013\Projects\DigiCuit-alpha2\DigiCuit-alpha2\bin\Debug\Jint.dll
-c:\users\theos\documents\visual studio 2013\Projects\DigiCuit-alpha2\DigiCuit-alpha2\obj\Debug\DigiCuit-alpha2.dll
-c:\users\theos\documents\visual studio 2013\Projects\DigiCuit-alpha2\DigiCuit-alpha2\obj\Debug\DigiCuit-alpha2.pdb
-C:\Users\Theos\documents\visual studio 2013\Projects\DigiCuit-alpha2\DigiCuit-alpha2\obj\Debug\DigiCuitEngine-alpha2.csprojResolveAssemblyReference.cache

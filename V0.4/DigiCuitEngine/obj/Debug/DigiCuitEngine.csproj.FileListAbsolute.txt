@@ -1,1 +1,8 @@
 C:\Users\Theos\Documents\Visual Studio 2013\Projects\DigiCuitEngine\DigiCuitEngine\obj\Debug\DigiCuitEngine.csprojResolveAssemblyReference.cache
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DigiCuitEngine\obj\Debug\DigiCuitEngine.csprojResolveAssemblyReference.cache
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DigiCuitEngine\bin\Debug\DigiCuitEngine.dll
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DigiCuitEngine\bin\Debug\DigiCuitEngine.pdb
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DigiCuitEngine\bin\Debug\Jint2.1.dll
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DigiCuitEngine\bin\Debug\Jint2.1.pdb
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DigiCuitEngine\obj\Debug\DigiCuitEngine.dll
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DigiCuitEngine\obj\Debug\DigiCuitEngine.pdb
