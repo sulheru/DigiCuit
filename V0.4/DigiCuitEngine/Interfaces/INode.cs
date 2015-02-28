@@ -17,6 +17,12 @@ namespace DigiCuitEngine.Interfaces
             : base(engine)
         { }
 
+        public INode(Jint.Engine engine) : base(engine)
+        {
+            // TODO: Complete member initialization
+            this.Engine = engine;
+        }
+
         public override bool PathFinding(string[] VisitedIds, string endId, ref string[] PathIds, ref List<string[]>PathCollection)
         {
             List<string> vIds = new List<string>();

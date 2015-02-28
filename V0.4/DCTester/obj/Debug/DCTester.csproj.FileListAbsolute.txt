@@ -1,0 +1,13 @@
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCTester\bin\Debug\DCTester.exe.config
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCTester\obj\Debug\DCTester.csprojResolveAssemblyReference.cache
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCTester\obj\Debug\DCTester.Form1.resources
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCTester\obj\Debug\DCTester.Properties.Resources.resources
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCTester\obj\Debug\DCTester.csproj.GenerateResource.Cache
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCTester\bin\Debug\DCTester.exe
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCTester\bin\Debug\DCTester.pdb
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCTester\bin\Debug\DigiCuitEngine.dll
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCTester\bin\Debug\Jint2.1.dll
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCTester\bin\Debug\Jint2.1.pdb
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCTester\bin\Debug\DigiCuitEngine.pdb
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCTester\obj\Debug\DCTester.exe
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCTester\obj\Debug\DCTester.pdb

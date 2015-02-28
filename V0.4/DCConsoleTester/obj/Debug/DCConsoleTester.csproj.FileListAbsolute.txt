@@ -1,0 +1,10 @@
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCConsoleTester\bin\Debug\DCConsoleTester.exe.config
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCConsoleTester\bin\Debug\DCConsoleTester.exe
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCConsoleTester\bin\Debug\DCConsoleTester.pdb
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCConsoleTester\bin\Debug\DigiCuitEngine.dll
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCConsoleTester\bin\Debug\Jint2.1.dll
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCConsoleTester\bin\Debug\Jint2.1.pdb
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCConsoleTester\bin\Debug\DigiCuitEngine.pdb
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCConsoleTester\obj\Debug\DCConsoleTester.csprojResolveAssemblyReference.cache
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCConsoleTester\obj\Debug\DCConsoleTester.exe
+C:\Users\Theos\Documents\GitHub\DigiCuit\V0.4\DCConsoleTester\obj\Debug\DCConsoleTester.pdb

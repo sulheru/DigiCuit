@@ -11,6 +11,10 @@ namespace DigiCuitEngine.Interfaces
         public abstract INode Node1 { get; set; }
         public abstract INode Node2 { get; set; }
 
+        public IPath(Jint.Engine engine)
+            : base(engine)
+        { }
+
         public override bool PathFinding(string[] VisitedIds, string endId, ref string[] PathIds, ref List<string[]> PathCollection)
         {
             List<string> pIds = new List<string>();

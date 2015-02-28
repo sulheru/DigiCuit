@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiCuitEngine", "DigiCuitE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jint2.1", "..\..\..\Visual Studio 2013\Projects\Jint\Jint2.1\Jint2.1.csproj", "{B2421E77-B66C-4F21-9593-441B1BFBD5E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCTester", "DCTester\DCTester.csproj", "{DAE1DD36-59D1-4E6E-A3FF-E3DF7E2F12E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCConsoleTester", "DCConsoleTester\DCConsoleTester.csproj", "{1A379AB9-D260-473B-9368-BA8D4FA1954C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{B2421E77-B66C-4F21-9593-441B1BFBD5E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2421E77-B66C-4F21-9593-441B1BFBD5E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2421E77-B66C-4F21-9593-441B1BFBD5E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAE1DD36-59D1-4E6E-A3FF-E3DF7E2F12E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE1DD36-59D1-4E6E-A3FF-E3DF7E2F12E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE1DD36-59D1-4E6E-A3FF-E3DF7E2F12E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE1DD36-59D1-4E6E-A3FF-E3DF7E2F12E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A379AB9-D260-473B-9368-BA8D4FA1954C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A379AB9-D260-473B-9368-BA8D4FA1954C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A379AB9-D260-473B-9368-BA8D4FA1954C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A379AB9-D260-473B-9368-BA8D4FA1954C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
