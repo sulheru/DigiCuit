@@ -117,7 +117,7 @@ namespace DigiCuitEngine.Native.Component
             set { _isActive = new JsValue(value); }
         }
 
-        public override Interfaces.IPathCollection Paths { get; set; }
+        public override Interfaces.ISegmentCollection Paths { get; set; }
 
         public override string Id { get; protected set; }
 

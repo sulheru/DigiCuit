@@ -26,6 +26,8 @@ namespace DigiCuitEngine.Interfaces
         }
 
         public static string GenerateUniqueId()
-        { return Guid.NewGuid().ToString("N"); ; }
+        { return Guid.NewGuid().ToString("N"); }
+
+        
     }
 }

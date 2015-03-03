@@ -10,6 +10,8 @@ namespace DigiCuitEngine
 {
     public class Engine : Jint.Engine
     {
+        public ComponentConstructor Component { get; private set; }
+
         public Engine()
             : base()
         {
@@ -17,14 +19,6 @@ namespace DigiCuitEngine
             Component.Configure();
             Component.PrototypeObject.Configure();
             Global.FastAddProperty("Component", Component, true, false, true);
-            Global.FastAddProperty("AddComponent", new ClrFunctionInstance(this, AddComponent), true, false, true);
         }
-
-        private Jint.Native.JsValue AddComponent(Jint.Native.JsValue arg1, Jint.Native.JsValue[] arg2)
-        {
-            throw new NotImplementedException();
-        }
-
-        public ComponentConstructor Component { get; private set; }
     }
 }

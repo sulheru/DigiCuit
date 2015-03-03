@@ -9,8 +9,8 @@ namespace DigiCuitEngine.Interfaces
 {
     public abstract class IMesh : IComponent
     {
-        public abstract INodeCollection<Point> Nodes { get; set; }
-        public abstract IPathCollection Paths { get; set; }
+        public abstract INodeCollection Nodes { get; set; }
+        public abstract ISegmentCollection Paths { get; set; }
 
         public override bool IsActive { get; set; }
         public override string Id { get; protected set; }

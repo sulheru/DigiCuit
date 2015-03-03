@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DigiCuitEngine.Interfaces
 {
-    public interface IPathCollection : IDictionary<string, IPath>
+    public interface ISegmentCollection : IDictionary<string, ISegment>
     {
     }
 }

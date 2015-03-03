@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DigiCuitEngine.Interfaces
 {
-    public interface INodeCollection<TKey> : IDictionary<TKey, INode>
+    public interface INodeCollection : IDictionary<string, INode>
     {
     }
 }
