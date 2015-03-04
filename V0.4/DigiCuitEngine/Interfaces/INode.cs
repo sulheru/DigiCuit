@@ -25,6 +25,11 @@ namespace DigiCuitEngine.Interfaces
 
         public override bool PathFinding(string[] VisitedIds, string endId, ref string[] PathIds, ref List<string[]>PathCollection)
         {
+            if (this.Id == endId) {
+                this.Run();
+                return true; 
+            }
+
             List<string> vIds = new List<string>();
             vIds.AddRange(VisitedIds);
             
@@ -44,7 +49,9 @@ namespace DigiCuitEngine.Interfaces
                     pIds.Clear();
                 }
             }
-            return hasExit.Contains(true);
+            bool result= hasExit.Contains(true);
+            if (result) { this.Run(); }
+            return result;
         }
     }
 }
